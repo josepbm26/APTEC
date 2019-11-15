@@ -53,7 +53,7 @@ public class Start {
 		JButton btnContinue = new JButton("Continue");
 		btnContinue.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//calling the constructor of the next window (taskmanagement) and creating it
+				//calling the constructor of the next window to open (taskmanagement), and creating it
 				TasksManagement window = new TasksManagement();
 				window.setVisible(true);
 				frame.dispose();

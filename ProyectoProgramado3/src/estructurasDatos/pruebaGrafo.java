@@ -7,7 +7,7 @@ public class pruebaGrafo{
 		Grafo g = new Grafo();
 
 
-		//Prueba en grafo conexo
+		//haciendo pruebas
 		g.agregarVertice(1);
 		g.agregarVertice(2);
 		g.agregarVertice(3);

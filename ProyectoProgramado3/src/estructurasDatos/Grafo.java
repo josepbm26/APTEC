@@ -165,7 +165,7 @@ public class Grafo{
 				}
 			}
 
-			//Mientras la cola no esté vacía
+			//Mientras que la cola no esté vacía
 			while(Cola.size() > 0)
 			{
 				NodoVertice temp1;

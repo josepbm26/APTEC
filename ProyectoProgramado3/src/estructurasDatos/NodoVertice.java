@@ -10,7 +10,7 @@ public class NodoVertice{
 		this.vertice = 0;
 		this.visitado = false;
 		this.aristas  = new LinkedList<Nodo>();
-	}//fin del constructor Nodo
+	}//fin del constructor
 
 	public NodoVertice(int v){
 			this.vertice = v;

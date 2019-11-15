@@ -8,7 +8,7 @@ package estructurasDatos;
  	public Nodo(){
 		this.vertice = 0;
 		this.peso = 0;
-	}//fin del constructor Nodo
+	}//fin del constructor 
 
 
 	//Constructor de nodo con el dato del vértice destino y el peso de la arista

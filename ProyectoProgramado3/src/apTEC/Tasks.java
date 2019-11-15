@@ -3,13 +3,15 @@ package apTEC;
 //creating the tasks class
 public class Tasks {
 	//attributes
+	private String name;
 	private int ID;
 	private String description;
 	private String effort;
 	private String responsable;
 	
 	//constructor
-	public Tasks(int ID,String description,String effort,String responsable) {
+	public Tasks(String name,int ID,String description,String effort,String responsable) {
+		setName(name);
 		setID(ID);
 		setDescription(description);
 		setEffort(effort);
@@ -18,6 +20,9 @@ public class Tasks {
 	
 	//methods of the class
 	//SETS
+	public void setName(String name) {
+		this.name = name;
+	}
 	public void setID(int ID) {
 		this.ID = ID;
 	}
@@ -32,6 +37,9 @@ public class Tasks {
 	}
 	
 	//GETS
+	public String getName() {
+		return name;
+	}
 	public int getID() {
 		return ID;
 	}

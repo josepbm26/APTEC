@@ -17,7 +17,7 @@ public class TasksManagement extends JFrame {
 
 
 	/**
-	 * Create the frame.
+	 * Create the frame
 	 */
 	public TasksManagement() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -49,5 +49,9 @@ public class TasksManagement extends JFrame {
 		lblTasksOfThe.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblTasksOfThe.setBounds(443, 44, 156, 14);
 		contentPane.add(lblTasksOfThe);
+		
+		JLabel lblName = new JLabel("Name:");
+		lblName.setBounds(50, 82, 48, 14);
+		contentPane.add(lblName);
 	}
 }
