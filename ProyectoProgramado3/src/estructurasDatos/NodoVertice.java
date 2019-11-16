@@ -1,6 +1,7 @@
 package estructurasDatos;
 import java.util.*;
 
+
 public class NodoVertice{
  	public int vertice;					//Almacena el dato del vértice
  	public boolean visitado;			//Indica si el vértice ha sido visitado o no

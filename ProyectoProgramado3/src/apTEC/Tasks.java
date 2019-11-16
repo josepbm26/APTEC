@@ -6,14 +6,16 @@ public class Tasks {
 	private String name;
 	private int ID;
 	private String description;
+	private String type;
 	private String effort;
 	private String responsable;
 	
 	//constructor
-	public Tasks(String name,int ID,String description,String effort,String responsable) {
+	public Tasks(String name,int ID,String description,String type,String effort,String responsable) {
 		setName(name);
 		setID(ID);
 		setDescription(description);
+		setType(type);
 		setEffort(effort);
 		setResponsable(responsable);
 	}
@@ -28,6 +30,9 @@ public class Tasks {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	public void setEffort(String effort) {
 		this.effort = effort;
@@ -46,6 +51,9 @@ public class Tasks {
 	public String getDescription() {
 		return description;
 	}
+	public String getType() {
+		return type;
+	}
 	public String getEffort() {
 		return effort;
 	}
@@ -53,4 +61,8 @@ public class Tasks {
 		return responsable;
 	}
 	
+	//toString method
+	public String toString() {
+		return "Task Info:\nName: "+name+"\nID: "+ID+"\nDescription: "+description+"\nType: "+type+"\nEffort: "+effort+"\nResponsable: "+responsable;
+	}
 }
