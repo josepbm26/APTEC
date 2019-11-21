@@ -1,6 +1,6 @@
 package estructurasDatos;
 import java.util.*;
-
+import java.util.LinkedList;
 
 public class Grafo{
 	public LinkedList <NodoVertice> vertices;  //Lista de vértices del grafo

@@ -45,7 +45,7 @@ public class TasksManagement extends JFrame {
 		TasksGraph = new Grafo();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 778, 385);
+		setBounds(100, 100, 830, 445);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -58,7 +58,7 @@ public class TasksManagement extends JFrame {
 		
 		JLabel lblAddTasks = new JLabel("Add tasks");
 		lblAddTasks.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblAddTasks.setBounds(30, 44, 67, 14);
+		lblAddTasks.setBounds(63, 43, 67, 14);
 		contentPane.add(lblAddTasks);
 		
 		JButton btnExit = new JButton("Exit");
@@ -67,69 +67,105 @@ public class TasksManagement extends JFrame {
 				dispose();
 			}
 		});
-		btnExit.setBounds(663, 312, 89, 23);
+		btnExit.setBounds(645, 311, 89, 23);
 		contentPane.add(btnExit);
 		
 		JList list = new JList();
-		list.setBounds(419, 70, 211, 230);
+		list.setBounds(383, 69, 211, 276);
 		contentPane.add(list);
+		
+		JButton btnMakeRoute = new JButton("Make route");
+		btnMakeRoute.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MakeRoute window = new MakeRoute();
+				window.setVisible(true);
+				//contentPane.dispose();
+			}
+		});
+		
+
+		JButton btnCreateWbs = new JButton("Create WBS");
+		btnCreateWbs.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				WBS window = new WBS();
+				window.setVisible(true);
+				//contentPane.dispose();
+				
+			}
+		});
+		btnCreateWbs.setBounds(629, 111, 132, 23);
+		contentPane.add(btnCreateWbs);
+		
+		JButton btnNewButton = new JButton("Add resources");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				AddResources window = new AddResources();
+				window.setVisible(true);
+				//contentPane.dispose();
+			}
+		});
+		btnNewButton.setBounds(629, 145, 132, 23);
+		contentPane.add(btnNewButton);
+		
+		btnMakeRoute.setBounds(629, 77, 132, 23);
+		contentPane.add(btnMakeRoute);
 		
 		JLabel lblTasksOfThe = new JLabel("Tasks of the project");
 		lblTasksOfThe.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblTasksOfThe.setBounds(443, 44, 156, 14);
+		lblTasksOfThe.setBounds(407, 43, 156, 14);
 		contentPane.add(lblTasksOfThe);
 		
 		JLabel lblName = new JLabel("Name:");
-		lblName.setBounds(50, 82, 48, 14);
+		lblName.setBounds(83, 81, 48, 14);
 		contentPane.add(lblName);
 		
 		textField = new JTextField();
-		textField.setBounds(98, 79, 150, 20);
+		textField.setBounds(131, 78, 150, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		JLabel lblId = new JLabel("ID:");
-		lblId.setBounds(67, 107, 30, 14);
+		lblId.setBounds(100, 106, 30, 14);
 		contentPane.add(lblId);
 		
 		JLabel lblDescription = new JLabel("Description:");
-		lblDescription.setBounds(20, 132, 77, 14);
+		lblDescription.setBounds(53, 131, 77, 14);
 		contentPane.add(lblDescription);
 		
 		JLabel lblEffort = new JLabel("Effort:");
-		lblEffort.setBounds(49, 213, 48, 14);
+		lblEffort.setBounds(82, 212, 48, 14);
 		contentPane.add(lblEffort);
 		
 		JLabel lblResponsable = new JLabel("Responsable:");
-		lblResponsable.setBounds(10, 185, 87, 14);
+		lblResponsable.setBounds(43, 184, 87, 14);
 		contentPane.add(lblResponsable);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(98, 104, 150, 20);
+		textField_1.setBounds(131, 103, 150, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(98, 129, 150, 20);
+		textField_2.setBounds(131, 128, 150, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"(type)", "Operative Task", "Aprobation Task", "Contract Signature", "Managament Task", "Changes"}));
-		comboBox.setBounds(98, 153, 150, 22);
+		comboBox.setBounds(131, 152, 150, 22);
 		contentPane.add(comboBox);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(98, 182, 150, 20);
+		textField_3.setBounds(131, 181, 150, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 		
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"(difficulty)", "Low", "Medium", "High"}));
-		comboBox_1.setBounds(98, 209, 150, 22);
+		comboBox_1.setBounds(131, 208, 150, 22);
 		contentPane.add(comboBox_1);
 		
-		JButton btnNewButton = new JButton("Add task");
+		JButton btnNewButton_1 = new JButton("Add task");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//creating the task object with the information written by the user
@@ -163,11 +199,11 @@ public class TasksManagement extends JFrame {
 				
 			}
 		});
-		btnNewButton.setBounds(133, 241, 89, 23);
-		contentPane.add(btnNewButton);
+		btnNewButton_1.setBounds(166, 240, 89, 23);
+		contentPane.add(btnNewButton_1);
 		
 		JLabel lblType = new JLabel("Type:");
-		lblType.setBounds(49, 157, 48, 14);
+		lblType.setBounds(82, 156, 48, 14);
 		contentPane.add(lblType);
 		
 
